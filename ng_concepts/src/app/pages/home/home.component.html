@@ -1,1 +1,69 @@
-<p>home works!</p>
+<section>
+  <h1>HTTP methods implemented</h1>
+  <div>
+    <h2>GET Request - Users</h2>
+    <ul>
+      <li *ngFor="let user of users" [value]="user.name">
+        <p>
+          {{user.name}} - {{user.email}}
+        </p>
+      </li>
+    </ul>
+    <div>
+      <button (click)="getUsers()">
+        Get users
+      </button>
+      <button (click)="clearUsers()">
+        Clear users
+      </button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div>
+    <h2>GET Request - Posts</h2>
+    <ul>
+      <li *ngFor="let post of posts" [value]="post.title">
+        <p>
+          {{post.id}} - {{post.title}}
+        </p>
+      </li>
+    </ul>
+    <div>
+      <button (click)="getPosts()">
+        Get posts
+      </button>
+      <button (click)="clearPosts()">
+        Clear posts
+      </button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div>
+    <h2>POST request</h2>
+
+    <div>
+      <div>
+        <input type="text" [(ngModel)]="post.title" placeholder="Add a post title here...">
+        <input type="text" [(ngModel)]="post.body" placeholder="Add a post body here...">
+        <button type="submit" (click)="createPost()">Create post</button>
+      </div>
+      <!-- <div>
+        <h3>Created post: </h3>
+        <p>
+          {{singlePost.id}} - {{singlePost.title}}
+        </p>
+      </div> -->
+    </div>
+  </div>
+
+  <div>
+    <h2>PUT request</h2>
+    <div>
+
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+/* import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,11 @@ export class GetService {
 
   constructor(private http: HttpClient) {}
 
-  getUsers(): any {
-    return this.http.get(`${this.apiUrl}/users`) /* Params a continuación de la URL */
+  getUsers() {
+    return this.http.get(`${this.apiUrl}/users`) // Params a continuación de la URL
       .subscribe(
-        (user) => this.users.push(user)
+        (result: any) => this.users = result
       )
   }
 }
+ */
